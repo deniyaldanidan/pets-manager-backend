@@ -7,7 +7,6 @@ import { Role } from './decorators/role.decorator';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Role('USER')
   @UseGuards(AuthGuard)
   @Get()
   getHello(@Req() req: Request): string {
