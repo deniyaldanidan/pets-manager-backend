@@ -47,7 +47,7 @@ model User {
   username String @unique
   email    String @unique
   password String
-  role     Role
+  role     Role   @default(USER)
   refresh  String
 }
 
