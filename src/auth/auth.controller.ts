@@ -10,6 +10,7 @@ import { AuthService } from './auth.service';
 import { LoginDto } from './dto/login.dto';
 import { RegisterDTO } from './dto/register.dto';
 import { Request, Response } from 'express';
+import { validationExceptionFactory } from 'src/exceptions/validation.exception';
 
 @Controller('auth')
 export class AuthController {
@@ -17,7 +18,8 @@ export class AuthController {
 
   @Post('/login')
   public login(
-    @Body(ValidationPipe) loginDto: LoginDto,
+    @Body(new ValidationPipe({ exceptionFactory: validationExceptionFactory }))
+    loginDto: LoginDto,
     @Res({ passthrough: true }) res: Response,
   ) {
     return this.authService.login(loginDto, res);
@@ -25,7 +27,13 @@ export class AuthController {
 
   @Post('/register')
   public register(
-    @Body(new ValidationPipe({ whitelist: true })) registerDTO: RegisterDTO,
+    @Body(
+      new ValidationPipe({
+        whitelist: true,
+        exceptionFactory: validationExceptionFactory,
+      }),
+    )
+    registerDTO: RegisterDTO,
     @Res({ passthrough: true }) res: Response,
   ) {
     return this.authService.register(registerDTO, res);
