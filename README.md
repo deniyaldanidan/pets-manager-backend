@@ -16,14 +16,29 @@
 - [x] Refresh
 - [x] Verify Access
 - [x] Protected Routes with User-Roles
+- [x] Revise the Schema
+- [x] Manage Breeds
+  - [x] Seed db with Breeds data
+  - [x] FindAll Breed Route
+  - [x] Create Breed Route
+  - [x] Update Breed Route
+  - [x] Delete Breed Route
+  - [x] Add Optional Search Params called type to FindAll Breed Route
 
 ## Available endpoints
 
-| ENDPOINT NAME      |     Route      | Method | Protected | Admin Only |
-| :----------------- | :------------: | :----: | :-------: | ---------: |
-| **HOME**           |       /        |  GET   |    YES    |         NO |
-| **LOGIN**          |  /auth/login   |  POST  |    NO     |         NO |
-| **REGISTER**       | /auth/register |  POST  |    NO     |         NO |
-| **REFRESH ACCESS** | /auth/refresh  |  POST  |    NO     |         NO |
-| **LOGOUT**         |  /auth/logout  |  GET   |    NO     |         NO |
-| **ADMIN**          |     /admin     |  GET   |    YES    |        YES |
+| ENDPOINT NAME           |      Route      | Method | Protected | Admin Only |                                       Note |
+| :---------------------- | :-------------: | :----: | :-------: | :--------: | -----------------------------------------: |
+| **HOME**                |        /        |  GET   |    NO     |     NO     |                       Still in DEVELOPMENT |
+| **LOGIN**               |   /auth/login   |  POST  |    NO     |     NO     |                                            |
+| **REGISTER**            | /auth/register  |  POST  |    NO     |     NO     |                                            |
+| **REFRESH ACCESS**      |  /auth/refresh  |  POST  |    NO     |     NO     |                                            |
+| **LOGOUT**              |  /auth/logout   |  POST  |    NO     |     NO     |                                            |
+| **READ ALL PET BREEDS** | /breed?type=DOG |  GET   |    NO     |     NO     | type value should be either `DOG` or `CAT` |
+| **Create PET BREED**    |     /breed      |  POST  |    YES    |    YES     |                                            |
+| **Update PET BREED**    |  /breed/:slug   |  PUT   |    YES    |    YES     |                                            |
+| **DELETE PET BREED**    |  /breed/:slug   | DELETE |    YES    |    YES     |                                            |
+
+---
+
+> `HOME` route will be where we will fetch about available pets to adopt.

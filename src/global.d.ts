@@ -1,0 +1,1 @@
+type PetType = 'CAT' | 'DOG';
