@@ -28,6 +28,9 @@ export class BreedService {
       where: {
         type,
       },
+      orderBy: {
+        name: 'asc',
+      },
     });
     return breeds;
   }

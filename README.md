@@ -38,6 +38,7 @@
 | **Create PET BREED**    |     /breed      |  POST  |    YES    |    YES     |                                            |
 | **Update PET BREED**    |  /breed/:slug   |  PUT   |    YES    |    YES     |                                            |
 | **DELETE PET BREED**    |  /breed/:slug   | DELETE |    YES    |    YES     |                                            |
+| **Create PET**          |  /rehome-a-pet  |  POST  |    YES    |     NO     |                 this is for rehoming a pet |
 
 ---
 
