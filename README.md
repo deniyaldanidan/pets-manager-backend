@@ -27,18 +27,21 @@
 
 ## Available endpoints
 
-| ENDPOINT NAME           |      Route      | Method | Protected | Admin Only |                                       Note |
-| :---------------------- | :-------------: | :----: | :-------: | :--------: | -----------------------------------------: |
-| **HOME**                |        /        |  GET   |    NO     |     NO     |                       Still in DEVELOPMENT |
-| **LOGIN**               |   /auth/login   |  POST  |    NO     |     NO     |                                            |
-| **REGISTER**            | /auth/register  |  POST  |    NO     |     NO     |                                            |
-| **REFRESH ACCESS**      |  /auth/refresh  |  POST  |    NO     |     NO     |                                            |
-| **LOGOUT**              |  /auth/logout   |  POST  |    NO     |     NO     |                                            |
-| **READ ALL PET BREEDS** | /breed?type=DOG |  GET   |    NO     |     NO     | type value should be either `DOG` or `CAT` |
-| **Create PET BREED**    |     /breed      |  POST  |    YES    |    YES     |                                            |
-| **Update PET BREED**    |  /breed/:slug   |  PUT   |    YES    |    YES     |                                            |
-| **DELETE PET BREED**    |  /breed/:slug   | DELETE |    YES    |    YES     |                                            |
-| **Create PET**          |  /rehome-a-pet  |  POST  |    YES    |     NO     |                 this is for rehoming a pet |
+| ENDPOINT NAME                    |        Route         | Method | Protected | Admin Only |                                         Note |
+| :------------------------------- | :------------------: | :----: | :-------: | :--------: | -------------------------------------------: |
+| **HOME**                         |          /           |  GET   |    NO     |     NO     |                         Still in DEVELOPMENT |
+| **LOGIN**                        |     /auth/login      |  POST  |    NO     |     NO     |                                              |
+| **REGISTER**                     |    /auth/register    |  POST  |    NO     |     NO     |                                              |
+| **REFRESH ACCESS**               |    /auth/refresh     |  POST  |    NO     |     NO     |                                              |
+| **LOGOUT**                       |     /auth/logout     |  POST  |    NO     |     NO     |                                              |
+| **READ ALL PET BREEDS**          |   /breed?type=DOG    |  GET   |    NO     |     NO     |   type value should be either `DOG` or `CAT` |
+| **Create PET BREED**             |        /breed        |  POST  |    YES    |    YES     |                                              |
+| **Update PET BREED**             |     /breed/:slug     |  PUT   |    YES    |    YES     |                                              |
+| **DELETE PET BREED**             |     /breed/:slug     | DELETE |    YES    |    YES     |                                              |
+| **Create PET**                   |    /rehome-a-pet     |  POST  |    YES    |     NO     |                   this is for rehoming a pet |
+| **GET MY REHOME REQUESTED PETS** |    /rehome-a-pet     |  GET   |    YES    |     NO     |                                              |
+| **Update PET**                   | /rehome-a-pet/:petId |  PUT   |    YES    |     NO     |                                              |
+| **DELETE PET**                   | /rehome-a-pet/:petId | DELETE |    YES    |     NO     | Admin also allowed to delete user's pet data |
 
 ---
 
