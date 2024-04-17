@@ -18,7 +18,6 @@ export const citiesData = [
       'Nalgonda',
       'Nizamabad',
       'Ongole',
-      'Hyderabad',
       'Srikakulam',
       'Nellore',
       'Visakhapatnam',

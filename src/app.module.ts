@@ -5,6 +5,8 @@ import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
 import { BreedModule } from './breed/breed.module';
 import { RehomepetModule } from './rehomepet/rehomepet.module';
+import { PetsManagementModule } from './pets-management/pets-management.module';
+import { PrismaService } from './prisma.service';
 
 @Module({
   imports: [
@@ -14,8 +16,9 @@ import { RehomepetModule } from './rehomepet/rehomepet.module';
     }),
     BreedModule,
     RehomepetModule,
+    PetsManagementModule,
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, PrismaService],
 })
 export class AppModule {}
